@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bpj-rS-N0e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fact View Controller-->
+        <scene sceneID="QOk-xe-ibd">
+            <objects>
+                <viewController id="Bpj-rS-N0e" customClass="FactViewController" customModule="CatFact" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aDp-3w-0Lq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-R7-gd1">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Facts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-iL-un1">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="700"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHd-W0-p41">
+                                        <rect key="frame" x="0.0" y="714" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="dem-zQ-oI2"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Next Fact" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Bpj-rS-N0e" eventType="touchUpInside" id="qWB-xv-g1z"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5yf-rD-VX6">
+                                        <rect key="frame" x="0.0" y="808" width="374" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="NLx-Da-zm9"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1wT-lP-dgX"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="zeQ-R7-gd1" firstAttribute="trailing" secondItem="aDp-3w-0Lq" secondAttribute="trailingMargin" id="N2E-0a-HJv"/>
+                            <constraint firstItem="zeQ-R7-gd1" firstAttribute="top" secondItem="1wT-lP-dgX" secondAttribute="top" id="SyG-BY-m3A"/>
+                            <constraint firstItem="zeQ-R7-gd1" firstAttribute="leading" secondItem="aDp-3w-0Lq" secondAttribute="leadingMargin" id="gNj-1T-AgT"/>
+                            <constraint firstItem="zeQ-R7-gd1" firstAttribute="bottom" secondItem="1wT-lP-dgX" secondAttribute="bottom" id="yYa-qL-AvR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayFactLabel" destination="bIY-iL-un1" id="8NL-wN-4gQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sv3-Ru-2xd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle" width="322" height="68"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
